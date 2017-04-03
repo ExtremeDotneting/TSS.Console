@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TSS.UniverseLogic.StableRandom">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>AnotherSources.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSS.UniverseLogic.Cell" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggAAAAFABIYBAAAAAAACAAAAAgQAAAAQCAAAAAABA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TSS.UniverseLogic.ConstsUniverse" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IREiABkAAgCEAQKFJAAEASBBgADIoBAEAIAAAAAAAAQ=</HashCode>
+      <FileName>ConstsUniverse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSS.UniverseLogic.Food" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Food.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TSS.UniverseLogic.Genome" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAIAAAEAAAAAAChAAAAAAAQAAAAIBAAABA=</HashCode>
+      <FileName>Genome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSS.UniverseLogic.Universe" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCZAAAQEAAIBQASBAwBABCBgABQAIIEAAAAEAACgg=</HashCode>
+      <FileName>Universe.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TSS.UniverseLogic.UniverseObject" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAABAEAAAAAAAAAAIBAAAYABgAAAAAAA=</HashCode>
+      <FileName>UniverseObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TSS.ConsoleOutput.ConsoleOutputManager" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAgQEQAQAAAAIACAAABABAAQAAAAAAAA=</HashCode>
+      <FileName>ConsoleOutputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSS.ConsoleOutput.Program">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TSS.ConsoleOutput.WindowMaximaizer">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TSS.UniverseLogic.ICell">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAABABIIBAAAAAAAAAAAAAgAAAAAQCAAAAAABA=</HashCode>
+      <FileName>ICell.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TSS.UniverseLogic.IFood">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>IFood.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TSS.UniverseLogic.IUniverse">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAAAAAAAABABAAAQAAAEAAAAEAAAAg=</HashCode>
+      <FileName>IUniverse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TSS.UniverseLogic.IUniverseObject" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAAAAAAAAAIBAAAYAAAAAAAAAA=</HashCode>
+      <FileName>IUniverseObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TSS.UniverseLogic.MoveDirection">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAgAAAgAAgAA=</HashCode>
+      <FileName>AnotherSources.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TSS.UniverseLogic.FoodType">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>AnotherSources.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

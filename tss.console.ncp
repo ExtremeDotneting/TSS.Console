@@ -1,0 +1,390 @@
+<Project>
+  <Name>GeneratedDiagram</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>first</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Cell</Name>
+        <Access>Public</Access>
+        <Location left="550" top="1053" />
+        <Size width="374" height="434" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int age</Member>
+        <Member type="Field">float energyLevel</Member>
+        <Member type="Field">Genome genome</Member>
+        <Member type="Field">MoveDirection moveDisperation</Member>
+        <Member type="Constructor">public Cell(ConstsUniverse constsUniverse)</Member>
+        <Member type="Constructor">public Cell(ConstsUniverse constsUniverse, Genome genome, float energyLevel, int descriptor)</Member>
+        <Member type="Method">public Genome GetGenome()</Member>
+        <Member type="Method">public MoveDirection GetMoveDisperation()</Member>
+        <Member type="Method">public float GetEnergyLevel()</Member>
+        <Member type="Method">public void AddEnergy(float value)</Member>
+        <Member type="Method">public bool IncAge()</Member>
+        <Member type="Method">public bool DecEnergy()</Member>
+        <Member type="Method">public int GetAge()</Member>
+        <Member type="Method">public Cell CreateChild()</Member>
+        <Member type="Method">public void CalcMoveDirectionAspiration(Universe universe)</Member>
+        <Member type="Method">public bool CanReproduct()</Member>
+        <Member type="Method">bool IsAdult()</Member>
+        <Member type="Method">float AnalizeDescriptor(Universe universe, int x, int y)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConsoleOutputManager</Name>
+        <Access>Public</Access>
+        <Location left="1498" top="356" />
+        <Size width="259" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Universe universe</Member>
+        <Member type="Field">int width</Member>
+        <Member type="Field">int height</Member>
+        <Member type="Field">string borderStr</Member>
+        <Member type="Field">bool disposed</Member>
+        <Member type="Constructor">public ConsoleOutputManager(Universe universe)</Member>
+        <Member type="Method">public Universe GetUniverse()</Member>
+        <Member type="Method">public void StartSimulation()</Member>
+        <Member type="Method">public void UpdateConsts()</Member>
+        <Member type="Method">void PrintFrame()</Member>
+        <Member type="Method">string GetFieldString(int[,] desc)</Member>
+        <Member type="Method">string GetInfoString()</Member>
+        <Member type="Method">public void Dispose()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Food</Name>
+        <Access>Public</Access>
+        <Location left="1314" top="1053" />
+        <Size width="166" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">float energyLevel</Member>
+        <Member type="Constructor">public Food(ConstsUniverse constsUniverse, FoodType foodType)</Member>
+        <Member type="Method">public float GetEnergyLevel()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Genome</Name>
+        <Access>Public</Access>
+        <Location left="562" top="1533" />
+        <Size width="356" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int hunger</Member>
+        <Member type="Field">int aggression</Member>
+        <Member type="Field">int Reproduction</Member>
+        <Member type="Field">int friendly</Member>
+        <Member type="Field">ConstsUniverse constsUniverse</Member>
+        <Member type="Constructor">public Genome(ConstsUniverse constsUniverse, int hunger, int aggression, int Reproduction, int friendly)</Member>
+        <Member type="Constructor">public Genome(ConstsUniverse constsUniverse)</Member>
+        <Member type="Method">public ConstsUniverse GetConstsUniverse()</Member>
+        <Member type="Method">public int GetHunger()</Member>
+        <Member type="Method">public int GetAggression()</Member>
+        <Member type="Method">public int GetReproduction()</Member>
+        <Member type="Method">public int GetFriendly()</Member>
+        <Member type="Method">public Genome Clone()</Member>
+        <Member type="Method">public Genome CloneAndMutate()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Universe</Name>
+        <Access>Public</Access>
+        <Location left="807" top="356" />
+        <Size width="524" height="621" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">UniverseObject[,] universeMatrix</Member>
+        <Member type="Field">List&lt;Cell&gt; cellList</Member>
+        <Member type="Field">int width</Member>
+        <Member type="Field">int height</Member>
+        <Member type="Field">long ticksCount</Member>
+        <Member type="Field">int blockCellDesc</Member>
+        <Member type="Field">Cell MostFitGenome_OneCell</Member>
+        <Member type="Field">int MostFitGenome_CellsCount</Member>
+        <Member type="Field">ConstsUniverse constsUniverse</Member>
+        <Member type="Constructor">public Universe(int width, int height, int cellsStartCount)</Member>
+        <Member type="Method">public ConstsUniverse GetConstsUniverse()</Member>
+        <Member type="Method">public void DoUniverseTick()</Member>
+        <Member type="Method">public int GetHeight()</Member>
+        <Member type="Method">public int GetWidth()</Member>
+        <Member type="Method">public int GetObjectDescriptor(int x, int y)</Member>
+        <Member type="Method">public int[,] GetAllDescriptors()</Member>
+        <Member type="Method">public int GetCellsCount()</Member>
+        <Member type="Method">public long GetTicksCount()</Member>
+        <Member type="Method">public Tuple&lt;Cell, int&gt; GetMostFit()</Member>
+        <Member type="Method">bool ValidateCords(int x, int y)</Member>
+        <Member type="Method">void SetMatrixElement(int x, int y, UniverseObject universeObject)</Member>
+        <Member type="Method">bool AddUniverseObject(int x, int y, UniverseObject universeObject, bool canReSetPrevObject)</Member>
+        <Member type="Method">void RelocateUniverseObject(int x1, int y1, int x2, int y2)</Member>
+        <Member type="Method">void GenerateCells(int count)</Member>
+        <Member type="Method">void GenerateFood(int count)</Member>
+        <Member type="Method">void KillCell(int x, int y)</Member>
+        <Member type="Method">void HandleCellMove(Cell cell)</Member>
+        <Member type="Method">void HandleAllCellsMoves()</Member>
+        <Member type="Method">void CheckAllCells()</Member>
+        <Member type="Method">void CalcMostFitCell()</Member>
+        <Member type="Method">Cell FindCellByDesc(int descriptor)</Member>
+        <Member type="Method">List&lt;int&gt; GetCellsDescriptors()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UniverseObject</Name>
+        <Access>Public</Access>
+        <Location left="997" top="1053" />
+        <Size width="224" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected int descriptor</Member>
+        <Member type="Field">protected int x</Member>
+        <Member type="Field">protected int y</Member>
+        <Member type="Field">ConstsUniverse constsUniverse</Member>
+        <Member type="Constructor">public UniverseObject(ConstsUniverse cu)</Member>
+        <Member type="Method">public ConstsUniverse GetConstsUniverse()</Member>
+        <Member type="Method">public void SetCords(int x, int y)</Member>
+        <Member type="Method">public int GetX()</Member>
+        <Member type="Method">public int GetY()</Member>
+        <Member type="Method">public int GetDesc()</Member>
+        <Member type="Method">public void Dispose()</Member>
+        <Member type="Method">public bool isDisposed()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Simulator</Name>
+        <Access>Public</Access>
+        <Location left="1289" top="184" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">static void Main(string[] args)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConstsUniverse</Name>
+        <Access>Public</Access>
+        <Location left="1579" top="811" />
+        <Size width="302" height="655" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int CellAge_Max</Member>
+        <Member type="Field">public int CellAge_AdultCell</Member>
+        <Member type="Field">public float EnergyLevel_CreatingCell</Member>
+        <Member type="Field">public float EnergyLevel_NeededForReproduction</Member>
+        <Member type="Field">public float EnergyLevel_MaxForCell</Member>
+        <Member type="Field">public float EnergyLevel_DeadCell</Member>
+        <Member type="Field">public float EnergyLevel_DefFood</Member>
+        <Member type="Field">public float EnergyLevel_MovesFriendly</Member>
+        <Member type="Field">public float EnergyLevel_MovesAggression</Member>
+        <Member type="Field">public bool Mutation_Enable</Member>
+        <Member type="Field">public int Mutation_ChangedValuesAtOne</Member>
+        <Member type="Field">public int Mutation_ChancePercent</Member>
+        <Member type="Field">public int CellsCount_MaxWithOneType</Member>
+        <Member type="Field">public int CellsCount_MaxAtField</Member>
+        <Member type="Field">public float EnergyEntropyPerSecond</Member>
+        <Member type="Field">public int CellGenome_Child_Aggression</Member>
+        <Member type="Field">public int Special_FoodCountForTick</Member>
+        <Member type="Field">public bool Special_EnableStatistics</Member>
+        <Member type="Field">public int Special_PrintingPause</Member>
+        <Member type="Field">int CellGenome_hungerMin</Member>
+        <Member type="Field">int CellGenome_hungerMax</Member>
+        <Member type="Field">int CellGenome_aggressionMin</Member>
+        <Member type="Field">int CellGenome_aggressionMax</Member>
+        <Member type="Field">int CellGenome_reproductionMin</Member>
+        <Member type="Field">int CellGenome_reproductionMax</Member>
+        <Member type="Field">int CellGenome_friendlyMin</Member>
+        <Member type="Field">int CellGenome_friendlyMax</Member>
+        <Member type="Property">public int CellGenome_Hunger { get; set; }</Member>
+        <Member type="Property">public int CellGenome_Aggression { get; set; }</Member>
+        <Member type="Property">public int CellGenome_Reproduction { get; set; }</Member>
+        <Member type="Property">public int CellGenome_Friendly { get; set; }</Member>
+        <Member type="Method">int RandomFromRange(int minValue, int maxValue)</Member>
+        <Member type="Method">public string ToXmlString()</Member>
+        <Member type="Method">public void FromXmlString(string xmlStr)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="4" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1105</X>
+          <Y>1002</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1105</X>
+          <Y>1028</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="0" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>959</X>
+          <Y>1144</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>965</X>
+          <Y>1144</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1289</X>
+          <Y>1149</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1247</X>
+          <Y>1149</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="0" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>741</X>
+          <Y>1508</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>885</X>
+          <Y>1002</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>744</X>
+          <Y>1028</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1272</X>
+          <Y>1002</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1392</X>
+          <Y>1028</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1320</X>
+          <Y>318</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1077</X>
+          <Y>331</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1415</X>
+          <Y>325</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>667</X>
+          <Y>1028</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>765</X>
+          <Y>872</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="4" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1356</X>
+          <Y>822</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1554</X>
+          <Y>863</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>949</X>
+          <Y>1437</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1246</X>
+          <Y>1305</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>958</X>
+          <Y>1590</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1721</X>
+          <Y>1498</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
